@@ -29,7 +29,7 @@ if "messages" not in st.session_state.keys(): # Initialize the chat message hist
  #   model="meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo",
   #  openai_api_key=st.secrets["TOGETHER_API_KEY"],
    # openai_api_base="https://api.together.xyz/v1"
-)
+
 
 """
 # --- BLOCK 2: OpenAI (GPT) ---
