@@ -22,23 +22,21 @@ if "messages" not in st.session_state.keys(): # Initialize the chat message hist
 # ===================================================================
 # CHOOSE YOUR MODEL: Uncomment only ONE of the blocks below
 # ===================================================================
-
-# --- BLOCK 1: Together.xyz (Llama) ---
-#from langchain_openai import ChatOpenAI
-#llm = ChatOpenAI(
- #   model="meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo",
-  #  openai_api_key=st.secrets["TOGETHER_API_KEY"],
-   # openai_api_base="https://api.together.xyz/v1"
-
-
 """
+# --- BLOCK 1: Together.xyz (Llama) ---
+from langchain_openai import ChatOpenAI
+llm = ChatOpenAI(
+    model="meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo",
+   openai_api_key=st.secrets["TOGETHER_API_KEY"],
+    openai_api_base="https://api.together.xyz/v1"
+"""
+
 # --- BLOCK 2: OpenAI (GPT) ---
 from langchain_openai import ChatOpenAI
 llm = ChatOpenAI(
     model_name="gpt-4o-mini",
     openai_api_key=st.secrets["OPENAI_API_KEY"]
 )
-"""
 
 """
 # --- BLOCK 3: Google (Gemini) ---
