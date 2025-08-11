@@ -46,7 +46,7 @@ llm = ChatOpenAI(
 #llm = ChatGoogleGenerativeAI(
  #   model="gemini-pro",
   #  google_api_key=st.secrets["GOOGLE_API_KEY"]
-)
+#)
 """
 
 # ===================================================================
