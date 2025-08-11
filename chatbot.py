@@ -34,7 +34,7 @@ if "messages" not in st.session_state.keys(): # Initialize the chat message hist
 #--- BLOCK 2: OpenAI (GPT) ---
 from langchain_openai import ChatOpenAI
 llm = ChatOpenAI(
- model_name="gpt-4o-mini",
+ model_name="gpt-5",
   openai_api_key=st.secrets["OPENAI_API_KEY"]
 )
 
