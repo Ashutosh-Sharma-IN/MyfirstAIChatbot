@@ -33,21 +33,21 @@ llm = ChatOpenAI(
 
 """
 # --- BLOCK 2: OpenAI (GPT) ---
-from langchain_openai import ChatOpenAI
-llm = ChatOpenAI(
-    model_name="gpt-4o-mini",
-    openai_api_key=st.secrets["OPENAI_API_KEY"]
-)
+#from langchain_openai import ChatOpenAI
+#llm = ChatOpenAI(
+ #   model_name="gpt-4o-mini",
+  #  openai_api_key=st.secrets["OPENAI_API_KEY"]
+#)
 """
 
 """
 # --- BLOCK 3: Google (Gemini) ---
 # Note: You would also need to run: pip install langchain-google-genai
-from langchain_google_genai import ChatGoogleGenerativeAI
-llm = ChatGoogleGenerativeAI(
-    model="gemini-pro",
-    google_api_key=st.secrets["GOOGLE_API_KEY"]
-)
+#from langchain_google_genai import ChatGoogleGenerativeAI
+#llm = ChatGoogleGenerativeAI(
+ #   model="gemini-pro",
+  #  google_api_key=st.secrets["GOOGLE_API_KEY"]
+#)
 """
 
 # ===================================================================
