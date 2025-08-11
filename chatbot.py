@@ -19,14 +19,40 @@ if "messages" not in st.session_state.keys(): # Initialize the chat message hist
         {"role": "assistant", "content": "How can I help you today?"}
     ]
 
-# Initialize ChatOpenAI and ConversationChain
-# llm = ChatOpenAI(model_name="gpt-4o-mini")
-# llm = ChatGoogleGenerativeAI(model = "gemini-pro")
-llm = ChatOpenAI(model = "meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo",
-                      openai_api_key = st.secrets["TOGETHER_API_KEY"] , ## use your key
-                      openai_api_base = "https://api.together.xyz/v1"
+# ===================================================================
+# CHOOSE YOUR MODEL: Uncomment only ONE of the blocks below
+# ===================================================================
 
+# --- BLOCK 1: Together.xyz (Llama) ---
+#from langchain_openai import ChatOpenAI
+#llm = ChatOpenAI(
+ #   model="meta-llama/Llama-3.2-90B-Vision-Instruct-Turbo",
+  #  openai_api_key=st.secrets["TOGETHER_API_KEY"],
+   # openai_api_base="https://api.together.xyz/v1"
 )
+
+"""
+# --- BLOCK 2: OpenAI (GPT) ---
+from langchain_openai import ChatOpenAI
+llm = ChatOpenAI(
+    model_name="gpt-4o-mini",
+    openai_api_key=st.secrets["OPENAI_API_KEY"]
+)
+"""
+
+"""
+# --- BLOCK 3: Google (Gemini) ---
+# from langchain_google_genai import ChatGoogleGenerativeAI
+#llm = ChatGoogleGenerativeAI(
+ #   model="gemini-pro",
+  #  google_api_key=st.secrets["GOOGLE_API_KEY"]
+)
+"""
+
+# ===================================================================
+# This part of the code stays the same no matter which block is active
+# ===================================================================
+conversation = ConversationChain(memory=st.session_state.buffer_memory, llm=llm)
 
 conversation = ConversationChain(memory=st.session_state.buffer_memory, llm=llm)
 
