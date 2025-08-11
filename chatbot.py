@@ -31,16 +31,13 @@ llm = ChatOpenAI(
     openai_api_base="https://api.together.xyz/v1"
 )
 
-"""
-# --- BLOCK 2: OpenAI (GPT) ---
+#--- BLOCK 2: OpenAI (GPT) ---
 #from langchain_openai import ChatOpenAI
 #llm = ChatOpenAI(
- #   model_name="gpt-4o-mini",
-  #  openai_api_key=st.secrets["OPENAI_API_KEY"]
+ #model_name="gpt-4o-mini",
+  #openai_api_key=st.secrets["OPENAI_API_KEY"]
 #)
-"""
 
-"""
 # --- BLOCK 3: Google (Gemini) ---
 # Note: You would also need to run: pip install langchain-google-genai
 #from langchain_google_genai import ChatGoogleGenerativeAI
@@ -48,8 +45,6 @@ llm = ChatOpenAI(
  #   model="gemini-pro",
   #  google_api_key=st.secrets["GOOGLE_API_KEY"]
 #)
-"""
-
 # ===================================================================
 # This part of the code stays the same no matter which block is active
 # ===================================================================
